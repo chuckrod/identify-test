@@ -1,0 +1,1 @@
+This repository should house different bash configurations for linux systems to help identify whether that system is a test or production system. Alternatively we can also store background images here for any non command line system we want to mark this way as well.
