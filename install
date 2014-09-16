@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# Used to install the proper bashrc file for your system.
+
+if [ $# -eq 0 ] 
+then
+    echo 'You must specify an argument. Arguments can be either "test" or "prod".'
+    exit 0
+elif [ $# -gt 1 ] 
+then
+    echo 'You can only specify one argument. Arguments can be either "test" or "prod".'
+    exit 0
+fi
+
+if [ $1 = 'test' ] 
+then
+    `cp bashrc-test ~/.bashrc`
+    echo 'Test system bashrc file installed successfully.'
+    exit 0
+elif [ $1 = 'prod' ] 
+then
+    `cp bashrc-production ~/.bashrc`
+    echo 'Production system bashrc file installed successfully.'
+    exit 0
+else
+    echo 'You did not enter a valid arugment. Arguments can be either "test" or "prod".'
+    exit 0
+fi
+
